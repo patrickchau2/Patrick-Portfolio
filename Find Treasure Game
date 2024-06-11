@@ -1,0 +1,71 @@
+print('''
+                                              ,--,  ,.-.
+                ,                   \,       '-,-`,'-.' | ._
+               /|           \    ,   |\         }  )/  / `-,',
+               [ '          |\  /|   | |        /  \|  |/`  ,`
+               | |       ,.`  `,` `, | |  _,...(   (      _',
+   -ART BY-    \  \  __ ,-` `  ,  , `/ |,'      Y     (   \_L\
+    -ZEUS-      \  \_\,``,   ` , ,  /  |         )         _,/
+                 \  '  `  ,_ _`_,-,<._.<        /         /
+                  ', `>.,`  `  `   ,., |_      |         /
+                    \/`  `,   `   ,`  | /__,.-`    _,   `\
+                -,-..\  _  \  `  /  ,  / `._) _,-\`       \
+                 \_,,.) /\    ` /  / ) (-,, ``    ,        |
+                ,` )  | \_\       '-`  |  `(               \
+               /  /```(   , --, ,' \   |`<`    ,            |
+              /  /_,--`\   <\  V /> ,` )<_/)  | \      _____)
+        ,-, ,`   `   (_,\ \    |   /) / __/  /   `----`
+       (-, \           ) \ ('_.-._)/ /,`    /
+       | /  `          `/ \\ V   V, /`     /
+    ,--\(        ,     <_/`\\     ||      /
+   (   ,``-     \/|         \-A.A-`|     /
+  ,>,_ )_,..(    )\          -,,_-`  _--`
+ (_ \|`   _,/_  /  \_            ,--`
+  \( `   <.,../`     `-.._   _,-`
+   `                      ```
+''')
+print("Welcome to the Treasure Island.")
+print("Your mission is to find the treasure.")
+
+choice1 = input('You\'re at a crossroad. Where do you want to go? Type "left" or "right": ').lower()
+
+if choice1 == "left":
+    choice2 = input('You\'ve come to a mountain. There is a small house on the top of the mountain. Type "wait" to wait, or type "climb" to climb the mountain: ').lower()
+    if choice2 == "wait":
+        choice3 = input('You see a bear running toward you. Type "run" to run away, or type "fight" to fight the bear: ').lower()
+        if choice3 == "run":
+            print("You run and fall into a hole, and the bear runs past you. However, you broke your leg and can’t walk. You are dead.")
+        elif choice3 == "fight":
+            print("You fight the bear, and you win.")
+            choice4 = input('You are starving. Type "eat" to eat the bear, or type "go" to continue your journey: ').lower()
+            if choice4 == "eat":
+                print("You eat the bear, and you are full.")
+                choice5 = input('You see a house. Type "enter" to enter the house, or type "go" to continue your journey: ').lower()
+                if choice5 == "enter":
+                    print("You enter the house and find a dragon. You are dead because you forgot you haven’t climbed the mountain yet.")
+                elif choice5 == "go":
+                    print("You continue your journey and find a cave. The cave has a sign saying 'shortcut'.")
+                    choice6 = input('Type "shortcut" to take the shortcut, or type "go" to continue climbing the mountain: ').lower()
+                    if choice6 == "shortcut":
+                        print("You take the shortcut, and you find out this is the dragon's cave and it is looking at you. You are dead.")
+                    elif choice6 == "go":
+                        print("You continue climbing the mountain and find the dragon. You are dead because the dragon smelled you when you were at the cave.")
+                        print("However, you somehow reborn back to the crossroad. Now you want to choose to go right.")
+                        choice7 = input('Type "right" to go to the right, or type "left" to go to the left: ').lower()
+                        if choice7 == "right":
+                            print("You go to the right, and there is another cave. The cave has a sign saying 'shortcut'.")
+                            choice8 = input('Type "shortcut" to take the shortcut, or type "no" to continue going forward: ').lower()
+                            if choice8 == "shortcut":
+                                print("You take the shortcut, and you find the treasure. You win!")
+                            elif choice8 == "no":
+                                print("You continue going forward, and you find a crossroad.")
+                                choice9 = input('Type "right" to go to the right, or type "left" to go to the left: ').lower()
+                                if choice9 == "right":
+                                    print("You go to the right. The road leads you directly to the mountain, and the dragon finds you there. You are dead.")
+                                elif choice9 == "left":
+                                    print("Congratulations, you find the dragon and you are dead.")
+    elif choice2 == "climb":
+        print("You climb the mountain and encounter the dragon. You are dead.")
+elif choice1 == "right":
+    print("You go to the right and fall into a pit. You are dead.")
+              
